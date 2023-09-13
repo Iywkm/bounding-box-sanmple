@@ -1,0 +1,60 @@
+.canvas-wrap {
+	position: relative;
+	padding: 0;
+	box-sizing: content-box;
+	margin: auto;
+}
+
+.canvas {
+	background-color: rgba(0, 0, 0, 0);
+}
+
+.canvas-editor,
+.canvas-background {
+	position: absolute;
+	left: 0;
+	top: 0;
+	border: 0;
+	max-width: 100%;
+	box-sizing: content-box;
+	padding: 0;
+	margin: 0;
+}
+
+.canvas-background {
+	z-index: 0;
+	background-color: rgb(130, 232, 234);
+}
+.canvas-editor {
+	z-index: 1;
+}
+
+.editor-buttons {
+	display: flex;
+	flex-direction: row;
+}
+
+.editor-button {
+	height: 3rem;
+	border-radius: 4px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+	font-size: 1.5rem;
+	color: black;
+	background: white;
+	min-width: 10rem;
+	border: gray 1px solid;
+	margin-right: 1rem;
+	margin-top: 0.5rem;
+
+	&:hover:enabled {
+		background: gray;
+		color: #ffffff;
+		opacity: 0.8;
+		transition-duration: 0.2s;
+	}
+	&:disabled {
+		background: lightgrey;
+		color: gray;
+		border: gray 0 solid;
+	}
+}
